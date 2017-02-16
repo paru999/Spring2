@@ -9,7 +9,7 @@ public class DB_insert1 extends DB_connection
 	
 	
 	
-	public boolean  insert(String firstname, String lastname, int phoneno, String email,String password) throws SQLException
+	public  insert(String firstname, String lastname, int phoneno, String email,String password) throws SQLException
 	{
 		PreparedStatement pt;
 					pt = super.conn

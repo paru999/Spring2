@@ -19,7 +19,7 @@ public class DB_insert1 extends DB_connection
 			pt.setInt(3,phoneno);
 			pt.setString(4,email);
 			pt.setString(5,password);
-			boolean y=pt.execute();
+			pt.execute();
 			//pt.getUsername();
 			
 			System.out.println("inserted");
@@ -46,43 +46,25 @@ public class DB_insert1 extends DB_connection
                      System.out.println("email:"+email + "pwd:"+password);
             }
 				pt1.execute();
-			//System.out.println("selected");
+			System.out.println("selected");
 		}
 		catch (SQLException e) {
 			e.printStackTrace();
-			//System.out.println("not inserted");
+			System.out.println("not inserted");
 		}
 		return 1;
 		
 	}
 	
-	public ResultSet store(String username, String password) throws SQLException
-	{
-		PreparedStatement pt1;
-		pt1=super.conn.
-		//prepareStatement("select email,password from tbl_user where email=?, password=?");
-				prepareStatement("call face(?,?)");
-		
-				
-				
-		pt1.setString(1,username);
-		pt1.setString(2,password);
-		pt1.execute();
-		 // System.out.println( pt1.execute());
-     ResultSet rs = pt1.executeQuery();
-   
-          
-          return rs;
-		
-	}
+
 
 		
 	
-	/*public static void main(String[] args)
+	public static void main(String[] args)
 	{
 		DB_insert1 db=new DB_insert1();
-		//System.out.println(db);
-		//db.insert("appuz", "ms", 156845, "appuz@gmail.com","appu123");
+		System.out.println(db);
+		db.insert("appuz", "ms", 156845, "appuz@gmail.com","appu123");
 		db.select("abc@gmail.com","abc123");
 		
 
@@ -90,7 +72,7 @@ public class DB_insert1 extends DB_connection
 		
 		
 	}
-	*/
+	
 	
 	
 	

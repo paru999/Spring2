@@ -15,7 +15,7 @@ import com.DBconnection.DB_insert1;
 @Controller
 public class logincontroller
 {
-	/*@RequestMapping(value="/login" ,method = RequestMethod.POST)
+	@RequestMapping(value="/login" ,method = RequestMethod.POST)
 	public String submit(Model model, @ModelAttribute("loginBean") loginBean loginBean)
 {
 	
@@ -43,7 +43,7 @@ public class logincontroller
 			return "hello2";
 			}
 	
-		}*/
+		}
 	
 	@RequestMapping(value="/login" ,method = RequestMethod.POST)
 	public String submit(Model model, @ModelAttribute("loginBean") loginBean loginBean) throws SQLException
@@ -57,7 +57,7 @@ public class logincontroller
 	  {
 		  model.addAttribute("name", x.getString("vchr_firstname"));
 		 // model.addAttribute("pwd", loginBean.getPwd());
-		 //  System.out.println("x="+x);*/
+		 //  System.out.println("x="+x);
 		
 		 
 		  return "hello";
